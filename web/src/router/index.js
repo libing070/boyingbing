@@ -13,7 +13,7 @@ import {i18n} from "../lang";
 Vue.use(Router)
 Vue.use(Toast);
 
-let terminaType = document.documentElement.clientWidth < 1024 ? "wap" : 'pc';
+let terminaType = document.documentElement.clientWidth < 768 ? "wap" : 'pc';
 console.log(terminaType);
 store.commit('getTerminaType',terminaType);
 const router= new Router({

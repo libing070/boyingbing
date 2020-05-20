@@ -2,26 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c3bd0ce-b81a-4198-bbe5-55431eb6b81c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/src/api/api_article.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/src/api/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/src/components/pc/Index.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/src/components/pc/Login.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/src/components/wap/Index.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/src/components/wap/Login.vue" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/article.js" afterPath="$PROJECT_DIR$/server/controllers/article.js" />
-      <change beforePath="$PROJECT_DIR$/server/modules/article.js" afterPath="$PROJECT_DIR$/server/modules/article.js" />
-      <change beforePath="$PROJECT_DIR$/server/routes/article.js" afterPath="$PROJECT_DIR$/server/routes/article.js" />
-      <change beforePath="$PROJECT_DIR$/web/.postcssrc.js" afterPath="$PROJECT_DIR$/web/.postcssrc.js" />
-      <change beforePath="$PROJECT_DIR$/web/config/index.js" afterPath="$PROJECT_DIR$/web/config/index.js" />
-      <change beforePath="$PROJECT_DIR$/web/package-lock.json" afterPath="$PROJECT_DIR$/web/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/web/package.json" afterPath="$PROJECT_DIR$/web/package.json" />
-      <change beforePath="$PROJECT_DIR$/web/src/App.vue" afterPath="$PROJECT_DIR$/web/src/App.vue" />
-      <change beforePath="$PROJECT_DIR$/web/src/components/Home/index.vue" afterPath="$PROJECT_DIR$/web/src/components/Home/index.vue" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/pc/Index.vue" afterPath="$PROJECT_DIR$/web/src/components/pc/Index.vue" />
       <change beforePath="$PROJECT_DIR$/web/src/libs/rem.js" afterPath="$PROJECT_DIR$/web/src/libs/rem.js" />
-      <change beforePath="$PROJECT_DIR$/web/src/main.js" afterPath="$PROJECT_DIR$/web/src/main.js" />
       <change beforePath="$PROJECT_DIR$/web/src/router/index.js" afterPath="$PROJECT_DIR$/web/src/router/index.js" />
-      <change beforePath="$PROJECT_DIR$/web/src/store/index.js" afterPath="$PROJECT_DIR$/web/src/store/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -98,11 +81,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Index.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Index.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/src/components/pc/Index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
+            <state relative-caret-position="1710">
               <caret line="57" column="17" lean-forward="false" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rem.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/libs/rem.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/src/router/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="15" column="60" lean-forward="false" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -129,7 +132,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/src/libs/rem.js" />
         <option value="$PROJECT_DIR$/web/src/App.vue" />
         <option value="$PROJECT_DIR$/web/src/store/index.js" />
         <option value="$PROJECT_DIR$/web/src/components/Home/index.vue" />
@@ -138,7 +140,6 @@
         <option value="$PROJECT_DIR$/web/.postcssrc.js" />
         <option value="$PROJECT_DIR$/web/src/components/pc/index.vue" />
         <option value="$PROJECT_DIR$/web/src/components/wap/Index.vue" />
-        <option value="$PROJECT_DIR$/web/src/router/index.js" />
         <option value="$PROJECT_DIR$/web/src/components/pc/Login.vue" />
         <option value="$PROJECT_DIR$/web/src/api/index.js" />
         <option value="$PROJECT_DIR$/web/src/api/api_goods.js" />
@@ -148,6 +149,8 @@
         <option value="$PROJECT_DIR$/server/controllers/article.js" />
         <option value="$PROJECT_DIR$/server/modules/article.js" />
         <option value="$PROJECT_DIR$/web/src/components/pc/Index.vue" />
+        <option value="$PROJECT_DIR$/web/src/libs/rem.js" />
+        <option value="$PROJECT_DIR$/web/src/router/index.js" />
       </list>
     </option>
   </component>
@@ -170,10 +173,10 @@
     <handled-path value="$PROJECT_DIR$/web/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2869" />
-    <option name="y" value="-11" />
-    <option name="width" value="2902" />
-    <option name="height" value="1582" />
+    <option name="x" value="-154" />
+    <option name="y" value="-26" />
+    <option name="width" value="1942" />
+    <option name="height" value="1042" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -199,35 +202,6 @@
             <path>
               <item name="boyingbing" type="b2602c69:ProjectViewProjectNode" />
               <item name="boyingbing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boyingbing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boyingbing" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boyingbing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boyingbing" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boyingbing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boyingbing" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boyingbing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boyingbing" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boyingbing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boyingbing" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="schema" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="boyingbing" type="b2602c69:ProjectViewProjectNode" />
@@ -267,6 +241,20 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="pc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boyingbing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boyingbing" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boyingbing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boyingbing" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -331,27 +319,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1589938963208</updated>
-      <workItem from="1589938964901" duration="19068000" />
+      <workItem from="1589938964901" duration="19615000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19068000" />
+    <option name="totallyTimeSpent" value="19615000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2869" y="-11" width="2902" height="1582" extended-state="6" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16514406" sideWeight="0.84375" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24920467" sideWeight="0.83950615" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299639" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16514406" sideWeight="0.15625" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24920467" sideWeight="0.16049382" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299639" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21775147" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -432,14 +420,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/libs/rem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -472,16 +452,6 @@
         <state relative-caret-position="300">
           <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#21#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -570,8 +540,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/src/components/pc/Index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
+        <state relative-caret-position="1710">
           <caret line="57" column="17" lean-forward="false" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/libs/rem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" column="60" lean-forward="false" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
           <folding />
         </state>
       </provider>

@@ -1,5 +1,5 @@
 <template>
-  <div class="pc-index">pc</div>
+  <div class="pc-index"></div>
 </template>
 
 <script>
@@ -55,6 +55,6 @@
 
 <style lang="scss">
    .pc-index{
-     font-size: 6px;
+     font-size: 5px;
    }
 </style>

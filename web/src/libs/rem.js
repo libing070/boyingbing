@@ -2,7 +2,7 @@ const baseSize = 32
 // 设置 rem 函数
 function setRem () {
 
-  if(document.documentElement.clientWidth<1024){//移动端
+  if(document.documentElement.clientWidth<768){//移动端
     // 当前页面宽度相对于 750 宽的缩放比例，可根据自己需要修改。
     const scale = document.documentElement.clientWidth / 750
     // 设置页面根节点字体大小（计算结果是以iphone6/7/8 (html font-size: 16px;)
