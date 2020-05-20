@@ -15,75 +15,18 @@ module.exports = {
     //assetsPublicPath: './',//测试
     assetsPublicPath: '/',//本地
     proxyTable: {
-      "**/login": {
-        target: host,
-        changeOrigin: true
-      },
-      "**/checkLogin": {
-        target: host,
-        changeOrigin: true
-      },
-      "/mail": {
-        target: host,
-        changeOrigin: true
-      },
-      "/car/brand": {
-        target: host,
-        changeOrigin: true
-      },
-      "/car/series": {
-        target: host,
-        changeOrigin: true
-      },
-      "/car/year": {
-        target: host,
-        changeOrigin: true
-      },
-      "/cross/media": {
-        target: host,
-        changeOrigin: true
-      },
-      "/praise/compet": {
-        target: host,
-        changeOrigin: true
-      },
-      "/sound/day": {
-        target: host,
-        changeOrigin: true
-      },
-      "/sound/all": {
-        target: host,
-        changeOrigin: true
-      },
-      "/praise/day": {
-        target: host,
-        changeOrigin: true
-      },
-      "/praise/emotion": {
-        target: host,
-        changeOrigin: true
-      },
-      "/praise/opinions": {
-        target: host,
-        changeOrigin: true
-      },
-      "/praise/first": {
-        target: host,
-        changeOrigin: true
-      },
-      "/praise/second": {
-        target: host,
-        changeOrigin: true
-      },
-      "/praise/third": {
-        target: host,
-        changeOrigin: true
+      '/api': {
+        changeOrigin: true,
+        target: 'http://127.0.0.1:3000',
+        pathRewrite: {
+          '^/api': '/api'
+        }
       }
     },
 
     // Various Dev Server settings
-    //host:'192.168.1.182',
-    host: 'localhost', // can be overwritten by process.env.HOST
+    host:'192.168.1.182',
+   // host: 'localhost', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,

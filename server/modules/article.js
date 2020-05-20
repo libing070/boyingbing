@@ -3,6 +3,7 @@ const db = require('../config/db');
 
 // 引入sequelize对象
 const Sequelize = db.sequelize;
+const Op = Sequelize.Op
 
 // 引入数据表模型
 const Article = Sequelize.import('../schema/article');
@@ -34,6 +35,14 @@ class ArticleModel {
                 id
             }
         });
+    }
+    /**
+     * 查询所有文章列表
+     * @param
+     * @returns {Promise<Model>}
+     */
+    static async getArticleAllList(){
+        return await Article.findAll();
     }
 }
 

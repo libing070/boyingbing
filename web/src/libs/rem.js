@@ -8,8 +8,9 @@ function setRem () {
     // 设置页面根节点字体大小（计算结果是以iphone6/7/8 (html font-size: 16px;)
     document.documentElement.style.fontSize = (baseSize * Math.min(scale, 2)) + 'px'
   }else{//PC端
-    deviceWidth = document.documentElement.clientWidth > 1920 ? 1920 : document.documentElement.clientWidth
-    document.getElementsByTagName('html')[0].style.cssText = 'font-size:' + (deviceWidth / 19.2/100) + 'px !important'
+    var whdef = 100 / 1920; // 表示1920的设计图,使用100PX的默认值
+    var rem = document.documentElement.clientWidth * whdef; // 以默认比例值乘以当前窗口宽度,得到该宽度下的相应FONT-SIZE值
+    document.documentElement.style.fontSize = rem + "px"; //适用于PC网站
 
   }
 

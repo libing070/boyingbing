@@ -95,6 +95,7 @@
       },
       created () {
           console.log("login"+this.$i18n.locale);
+          console.log(this.$store.state.terminaType)
       },
       methods:{
         loginSystem(){

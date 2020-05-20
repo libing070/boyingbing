@@ -8,39 +8,44 @@ import axios from 'axios'
 // 引入vuex-store
 import store from './store/index';
 import echarts from 'echarts'
+
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+
 import Vant from 'vant';
 import 'vant/lib/index.css';
 import * as t  from './assets/js/common'
 
-
+Vue.use(ElementUI);
 Vue.use(Vant);
 Vue.prototype.$axios = axios
 Vue.prototype.$echarts = echarts;
-var that=this;
-  setInterval(function () {
-    $.ajax({
-      url:'/v2/checkLogin',
-      type:'get',
-      xhrFields: {
-        withCredentials: true
-      },
-      crossDomain: true,
-      async: false,
-      success: function(status) {
-        var status=JSON.parse(status)['status'];
-        if (status ==-1) {
-          console.log(status);
-          localStorage.hasLogin = false;
-          localStorage.isSuperAdmin = '';
-          localStorage.name = '';
-          localStorage.UserPhone = '';
-          if(!(window.location.href.indexOf("sign-in")>-1)){
-            window.location.href='sign-in';
-          }
-        }
-      }
-    })
-  },2000);
+// var that=this;
+//   setInterval(function () {
+//     $.ajax({
+//       url:'/v2/checkLogin',
+//       type:'get',
+//       xhrFields: {
+//         withCredentials: true
+//       },
+//       crossDomain: true,
+//       async: false,
+//       success: function(status) {
+//         var status=JSON.parse(status)['status'];
+//         if (status ==-1) {
+//           console.log(status);
+//           localStorage.hasLogin = false;
+//           localStorage.isSuperAdmin = '';
+//           localStorage.name = '';
+//           localStorage.UserPhone = '';
+//           if(!(window.location.href.indexOf("sign-in")>-1)){
+//             window.location.href='sign-in';
+//           }
+//         }
+//       }
+//     })
+//   },2000);
 
 
 
@@ -61,8 +66,8 @@ Vue.use(myLoading);
 new Vue({
   el: '#app',
   i18n,
-  router,
   store,
+  router,
   components: { App },
   template: '<App/>'
 })

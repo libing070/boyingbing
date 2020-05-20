@@ -74,6 +74,31 @@ class articleController {
             }
         }
     }
+
+    /**
+     * 获取所有文章列表
+     * @param
+     * @returns {Promise.<void>}
+     */
+    static async alllist(ctx){
+        try{
+            // 查询文章详情模型
+            let data = await ArticleModel.getArticleAllList();
+            ctx.response.status = 200;
+            ctx.body = {
+                code: 200,
+                msg: '查询成功',
+                data
+            }
+        }catch(err){
+            ctx.response.status = 412;
+            ctx.body = {
+                code: 412,
+                msg: '查询失败',
+                data
+            }
+        }
+    }
 }
 
 module.exports = articleController;

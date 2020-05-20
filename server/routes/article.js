@@ -9,4 +9,6 @@ router.post('/article/create',ArtileController.create);
 //获取文章详情
 router.get('/article/:id',ArtileController.detail)
 
+//获取所有文章
+router.get('/article',ArtileController.alllist)
 module.exports = router

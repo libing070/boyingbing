@@ -5,9 +5,13 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state:{
+    terminaType:'',
     mycalendarshow:true,
   },
   mutations:{
+    getTerminaType(state,flag){
+      state.terminaType = flag;
+    },
     changeMyCalendar(state,flag){
       state.mycalendarshow = flag;
     },
