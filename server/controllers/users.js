@@ -51,9 +51,10 @@ class usersController {
         let id = ctx.params.id;
         if(id){
             try{
-                // 查询文章详情模型
+                // 查询用户详情模型
                 let data = await UsersModel.getUsersDetail(id);
               console.log("----"+data.createdAt);
+                console.log("==========="+ JSON.stringify(data));
                 ctx.response.status = 200;
                 ctx.body = {
                     code: 200,

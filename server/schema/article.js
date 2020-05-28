@@ -10,25 +10,25 @@ module.exports = function(sequelize,DataTypes){
         //文章标题
         title:{
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
             field: 'title'
         },
         //作者
         author:{
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
             field: 'author'
         },
         //内容
         content:{
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
             field:'content'
         },
         //文章分类
         category:{
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
             field: 'category'
         },
         // 创建时间

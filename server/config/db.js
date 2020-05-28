@@ -8,7 +8,8 @@ const sequelize = new Sequelize('boyingbing','root','123456',{
         charset:'utf8',
         collate:'utf8_general_ci',
         supportBigNumbers: true,
-        bigNumberStrings: true
+        bigNumberStrings: true,
+        dateStrings: true
     },
     pool:{
         max: 5,

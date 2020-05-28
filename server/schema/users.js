@@ -35,19 +35,19 @@ module.exports = function(sequelize,DataTypes){
             //真实姓名
             realName:{
                 type: DataTypes.STRING,
-                allowNull: false,
+                allowNull: true,
                 field: 'realName'
             },
             //性别
             sex:{
                 type: DataTypes.STRING,
-                allowNull: false,
+                allowNull: true,
                 field: 'sex'
             },
             //最后登录ip
             lastIp:{
                 type: DataTypes.STRING,
-                allowNull: false,
+                allowNull: true,
                 field: 'lastIp'
             },
             //登录状态

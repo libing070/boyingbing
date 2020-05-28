@@ -8,6 +8,7 @@ import WapIndex from '@/components/wap/Index'
 
 import PcLogin from '@/components/pc/Login'
 import PcIndex from '@/components/pc/Index'
+import DataFetching from '@/components/pc/DataFetching'
 import {i18n} from "../lang";
 
 Vue.use(Router)
@@ -29,6 +30,10 @@ const router= new Router({
     {
       path: '/'+terminaType+'/index',
       component:terminaType=='wap'?WapIndex:PcIndex,
+    },
+    {
+      path: '/pc/datafetching',
+      component:DataFetching,
     },
   ]
 })
