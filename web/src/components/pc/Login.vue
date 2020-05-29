@@ -19,7 +19,7 @@
       },
       methods: {
         login(){
-          this.$router.push("/pc/index");
+          this.$router.push("/pc/datafetching");
         }
       }
     }

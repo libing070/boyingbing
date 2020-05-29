@@ -24,7 +24,7 @@
       </el-radio-group>
     </div>
     <div class="start-btn"><span @click="startExec">开始执行</span>&nbsp;&nbsp;<span @click="stopExec">暂停</span></div>
-    <div class="desc"><span class="taking">已耗时：{{taking}}</span>&nbsp;&nbsp;<span class="sum">已入库：</span>{{pageNum-1}}条</div>
+    <div class="desc"><span class="taking">已耗时：{{taking}}</span>&nbsp;&nbsp;<span class="sum">已入库：</span>{{pageNum-1}}条  &nbsp; &nbsp; &nbsp;<span>{{desc}}</span></div>
     <div class="wrap" style="overflow-y: scroll">
     </div>
   </div>
@@ -37,9 +37,10 @@
         name: "data-fetching",
         data () {
         return {
-          radioType: 'travel',
+          radioType: 'nature',
           execUrl:'',
-          pageNum:1,
+          desc:'',
+          pageNum:905,
           t1:0,
           data:{},
           taking:'',
@@ -112,13 +113,14 @@
             API.create(params).then(function (result) {
               if (JSON.stringify(result.data) === '{}') {
                 console.log("没数据了");
+                that.desc='没有数据了';
                 that.pageNum=1;
                 window.clearInterval(that.time);
                 window.clearInterval(that.t1);
               }else{
                 if(that.flag){
                   that.pageNum++;
-                 that.t1= window.setTimeout(that.writePhotos,100);
+                 that.t1= window.setTimeout(that.writePhotos,1000);
                   var str='<p>'+result.data.ids+'------'+result.data.urlRaw+'</p>'
                   $(".wrap").prepend(str);
                 }else{
@@ -129,11 +131,22 @@
               }
             }, function (err) {
             //  that.loading = false;
-              that.$message.error({showClose: true, message: err.toString(), duration: 2000});
+
+              window.clearInterval(that.time);
+              window.clearInterval(that.t1);
+              setTimeout(function () {
+                that.startExec();
+              },1000*60);
+            //  that.$message.error({showClose: true, message: err.toString(), duration: 2000});
             }).catch(function (error) {
             //  that.loading = false;
               console.log(error);
-              that.$message.error({showClose: true, message: '请求出现异常', duration: 2000});
+              window.clearInterval(that.time);
+              window.clearInterval(that.t1);
+              setTimeout(function () {
+                that.startExec();
+              },1000*60)
+             // that.$message.error({showClose: true, message: '请求出现异常', duration: 2000});
             });
           }
       }
@@ -189,6 +202,7 @@
       margin: auto;
       overflow-y: auto;
       border: 1px solid white;
+      text-align: center;
     }
   }
 
