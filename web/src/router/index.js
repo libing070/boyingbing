@@ -9,6 +9,9 @@ import WapIndex from '@/components/wap/Index'
 import PcLogin from '@/components/pc/Login'
 import PcIndex from '@/components/pc/Index'
 import DataFetching from '@/components/pc/DataFetching'
+import Falls from '@/components/pc/Falls'
+import Falls4 from '@/components/pc/Falls4'
+
 import {i18n} from "../lang";
 
 Vue.use(Router)
@@ -35,6 +38,14 @@ const router= new Router({
       path: '/pc/datafetching',
       component:DataFetching,
     },
+    {
+      path: '/pc/falls',
+      component:Falls,
+    },
+    {
+      path: '/pc/falls4',
+      component:Falls4,
+    }
   ]
 })
 router.beforeEach((to, from, next) => {

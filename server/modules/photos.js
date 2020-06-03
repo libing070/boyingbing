@@ -69,6 +69,21 @@ class PhotosModel {
     static async getPhotosAllList(){
         return await Photos.findAll();
     }
+
+    /**
+     * 分页查询
+     * @param
+     * @returns {Promise<Model>}
+     */
+    static async getPhotosPageList (pageNo){
+        return await Photos.findAll(
+            {
+                limit: 20,
+                offset: (pageNo-1)*20
+            }
+        );
+    }
+
 }
 
 module.exports = PhotosModel;

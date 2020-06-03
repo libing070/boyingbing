@@ -62,6 +62,8 @@ Vue.config.productionTip = false
 import myLoading from './assets/js/myLoading'
 Vue.use(myLoading);
 
+
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

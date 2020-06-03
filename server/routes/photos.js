@@ -12,6 +12,7 @@ router.get('/photos/:id',PhotosController.detail)
 //获取所有文章
 router.get('/photos',PhotosController.alllist);
 
-
+//获取分页数据
+router.get('/photos/getPhotosPageList/:pageNo',PhotosController.getPhotosPageList);
 
 module.exports = router

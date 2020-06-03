@@ -37,10 +37,10 @@
         name: "data-fetching",
         data () {
         return {
-          radioType: 'nature',
+          radioType: 'animals',
           execUrl:'',
           desc:'',
-          pageNum:905,
+          pageNum:1899,
           t1:0,
           data:{},
           taking:'',

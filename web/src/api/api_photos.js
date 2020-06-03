@@ -14,4 +14,8 @@ export default {
   create: (params) => {
     return API.POST('/api/v1/photos/create',params)
   },
+  //分页查询
+  getPhotosPageList: params => {
+    return API.GET('/api/v1/photos/getPhotosPageList/'+params.pageNo)
+  },
 }
