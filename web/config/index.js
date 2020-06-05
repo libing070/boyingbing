@@ -14,7 +14,6 @@ module.exports = {
       '/api': {
         changeOrigin: true,
         //target: 'http://127.0.0.1:3000',//本地
-       target: 'http://39.100.72.53:3001',//正式
         pathRewrite: {
           '^/api': '/api'
         }
@@ -23,7 +22,6 @@ module.exports = {
 
     // Various Dev Server settings
    // host:'192.168.1.182',//本地
-    host:'39.100.72.53',//正式
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
