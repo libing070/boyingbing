@@ -39,7 +39,7 @@
       bottom: 0;
       margin: auto;
       width: 180px;
-      height:85px;
+      height:100px;
       background-color: white;
       border-radius: 3px;
       padding: 10px;

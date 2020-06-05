@@ -37,10 +37,10 @@
         name: "data-fetching",
         data () {
         return {
-          radioType: 'animals',
+          radioType: 'food-drink',
           execUrl:'',
           desc:'',
-          pageNum:1899,
+          pageNum:1,
           t1:0,
           data:{},
           taking:'',

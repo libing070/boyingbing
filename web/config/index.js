@@ -3,21 +3,18 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
-const HOST_PRODUCTION = "http://jeep.bitsmart.com.cn/";
-const HOST_DEV = "http://172.20.207.44:8080";
-// let host = HOST_DEV;
-let host = HOST_PRODUCTION;
 module.exports = {
   dev: {
 
     // Paths
     assetsSubDirectory: 'static',
-    //assetsPublicPath: './',//测试
-    assetsPublicPath: '/',//本地
+    //assetsPublicPath: '/',//本地
+    assetsPublicPath: './',//正式
     proxyTable: {
       '/api': {
         changeOrigin: true,
-        target: 'http://127.0.0.1:3000',
+        //target: 'http://127.0.0.1:3000',//本地
+       target: 'http://39.100.72.53:3001',//正式
         pathRewrite: {
           '^/api': '/api'
         }
@@ -25,8 +22,8 @@ module.exports = {
     },
 
     // Various Dev Server settings
-    host:'192.168.1.182',
-   // host: 'localhost', // can be overwritten by process.env.HOST
+   // host:'192.168.1.182',//本地
+    host:'39.100.72.53',//正式
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
