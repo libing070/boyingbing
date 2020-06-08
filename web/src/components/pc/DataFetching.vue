@@ -40,7 +40,7 @@
           radioType: 'current-events',
           execUrl:'',
           desc:'',
-          pageNum:81,
+          pageNum:1002,
           t1:0,
           data:{},
           taking:'',

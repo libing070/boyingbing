@@ -3,7 +3,9 @@
 </template>
 <script>
   //https://github.com/lfyfly/vue-waterfall-easy
+  import api_accesslog from '../../api/api_accesslog';
   import API from '../../api/api_photos';
+  import {toolsBase} from '../../assets/js/tools';
   import vueWaterfallEasy from 'vue-waterfall-easy'
   import axios from 'axios'
   export default {
@@ -12,18 +14,55 @@
     },
     data() {
       return {
+        accesslogData:{},
         imgsArr:[],
         pageNo: 1,// request param
       };
     },
     computed: {},
     created() {
-      this.getData()
+      this.loading();
+      this.getData();
     },
     mounted() {
 
     },
     methods: {
+      async loading(){
+        let that = this;
+        var ipinfo=await this.getIP();
+        that.accesslogData=ipinfo;
+        var res= await this.accesslog();
+      },
+      getIP(){
+        let that = this;
+        return new Promise(resolve => {
+          that.$axios
+            .get("http://ip-api.com/json/")
+            .then(res => {
+             if(res.status=200){
+               resolve(res.data);
+             }
+            });
+        });
+      },
+      accesslog(){
+        return new Promise(resolve => {
+          let that = this;
+          that.accesslogData.ip=  that.accesslogData.query;
+          that.accesslogData.systemVersion=toolsBase.getSystemVersion();
+          that.accesslogData.browserVersion=toolsBase.getBrowserInfo();
+          that.accesslogData.resolution=toolsBase.getResolution();
+          api_accesslog.create(that.accesslogData).then(function (result) {
+            if(result.code==200){
+            }
+          }, function (err) {
+          }).catch(function (error) {
+          });
+        });
+
+
+      },
       getData() {
         let that = this;
         API.getPhotosPageList({pageNo:that.pageNo}).then(function (result) {
