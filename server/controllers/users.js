@@ -102,6 +102,58 @@ class usersController {
             }
         }
     }
+    /**
+     * 获取用户详情
+     * @param ctx
+     * @returns {Promise.<void>}
+     */
+    static async login(ctx){
+        let req = ctx.request.body;
+        let userName = req.userName;
+        let password = req.password;
+        if(userName&&password){
+            try{
+                let currUser = await UsersModel.checkUsersByUserName(userName);
+                 if(currUser!=null){
+                     let data = await UsersModel.getUsersByUserNameAndPassword(userName,password);
+                     if(data!=null){
+                         ctx.response.status = 200;
+                         ctx.body = {
+                             code: 200,
+                             msg: '登录成功',
+                             data:{userName:data.userName}
+                         }
+                     }else{
+                         ctx.response.status = 202;
+                         ctx.body = {
+                             code: 202,
+                             msg: '密码错误',
+                         }
+                     }
+
+                 }else{
+                     ctx.response.status = 201;
+                     ctx.body = {
+                         code: 201,
+                         msg: '账号不存在',
+                     }
+                 }
+
+            }catch(err){
+                ctx.response.status = 412;
+                ctx.body = {
+                    code: 412,
+                    msg: '查询失败',
+                }
+            }
+        }else {
+            ctx.response.status = 416;
+            ctx.body = {
+                code: 416,
+                msg: '账号或密码错误'
+            }
+        }
+    }
 }
 
 module.exports = usersController;

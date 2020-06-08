@@ -11,6 +11,8 @@ import echarts from 'echarts'
 
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import md5 from 'js-md5'
+Vue.prototype.$md5 = md5
 
 
 import Vant from 'vant';

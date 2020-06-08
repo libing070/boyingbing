@@ -11,23 +11,23 @@
 </template>
 <style scoped lang="scss">
 .wrap {
-  height: 100vh;
   display: flex;
+  height: 200px;
   justify-content: space-around;
   align-items: center;
   text-align: center;
   h1 {
     text-align: center;
-    font-size: 5rem;
+    font-size: 0.6rem;
     font-family: fantasy;
     // color: #475669;
-    letter-spacing: 1rem;
+    letter-spacing: 0.1rem;
     margin: 0;
   }
   h4 {
     color: #fff;
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+    font-size: 0.6rem;
+    margin-top: 1rem;
   }
 }
 </style>

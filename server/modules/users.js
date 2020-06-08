@@ -49,6 +49,33 @@ class UsersModel {
     static async getUsersAllList(){
         return await Users.findAll();
     }
+
+    /**
+     * 检查用户数HiFi存在
+     * @param userName 账号
+     * @returns {Promise<Model>}
+     */
+    static async checkUsersByUserName(userName){
+        return await Users.findOne({
+            where:{
+                userName
+            }
+        });
+    }
+
+    /**
+     * 用户登录
+     * @param userName 账号 password 密码
+     * @returns {Promise<Model>}
+     */
+    static async getUsersByUserNameAndPassword(userName,password){
+        return await Users.findOne({
+            where:{
+                userName,
+                password
+            }
+        });
+    }
 }
 
 module.exports = UsersModel;
