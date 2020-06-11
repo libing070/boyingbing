@@ -78,6 +78,7 @@ class PhotosModel {
     static async getPhotosPageList (pageNo){
         return await Photos.findAll(
             {
+                order:[['id','DESC']] ,
                 limit: 20,
                 offset: (pageNo-1)*20
             }

@@ -1,5 +1,7 @@
 const PhotosleModel = require("../modules/photos");
 const request = require('request');
+const schedule = require('node-schedule');
+let total=0,dateSch;
 class photosController {
     /**
      * 创建文章
@@ -74,7 +76,67 @@ class photosController {
             }
         }
     }
+    /**
+     * 添加最新
+     * @param ctx
+     * @returns {Promise.<void>}
+     */
+    static async latestCreate(url){
+            try{
+                var data={};
+                //创建文章模型
+                const detchingdata = await photosController.fetchingData(url);
+                var list=JSON.parse(detchingdata);
+              //  console.log(list);
+                if(list.length>0){
+                    for(var i=0;i<list.length;i++){
+                      const res={
+                                type:'photos',
+                                ids: list[i].id,
+                                width: list[i].width,
+                                height: list[i].height,
+                                color: list[i].color,
+                                description: list[i].description,
+                                altDescription: list[i].alt_description,
+                                urlRaw: list[i].urls.raw,
+                                urlFull: list[i].urls.full,
+                                urlRegular: list[i].urls.regular,
+                                urlSmall: list[i].urls.small,
+                                urlThumb: list[i].urls.thumb,
+                                linkSelf: list[i].links.self,
+                                linkHtml: list[i].links.html,
+                                linkDownload: list[i].links.download,
+                                linkDownloadLocation: list[i].links.download_location,
+                                likes: list[i].likes,
+                                likedByUser: list[i].liked_by_user,
+                                userId: list[i].user.id,
+                                userUpdateAt: list[i].user.updated_at,
+                                userName: list[i].user.username,
+                                userRealName: list[i].user.name,
+                                userAppType: '',
+                                userAppAccount: '',
+                                userBio: list[i].user.bio,
+                                userLocation: list[i].user.location,
+                                userHeadPortrait: list[i].user.profile_image.large,
 
+                            }
+                            const ret = await PhotosleModel.createPhotos(res);
+                            data = await PhotosleModel.getPhotosDetail(ret.id);
+                          //  console.log(data);
+                    }
+                }else{
+                    // 定时器取消
+                    dateSch.cancel();
+                    total=0;
+                }
+            }catch(err){
+                // 定时器取消
+                dateSch.cancel();
+                total=0;
+              console.log(err);
+            }
+
+    }
     /**
      * 获取文章详情
      * @param ctx
@@ -190,7 +252,29 @@ class photosController {
         }).catch(new Function());
 
     }
+    static async  scheduleCronstyle(){
+       // 在每天的凌晨1点1分30秒触发
+        let timeSch=  schedule.scheduleJob('30 1 1 * * *',()=>{
+            //每5秒执行一次:
+             dateSch= schedule.scheduleJob('*/5 * * * * *',()=>{
+                if(total<100){
+                    total++;
+                    var url='https://unsplash.com/napi/photos?page='+total+'&per_page=10';
+                     photosController.latestCreate(url);
+                }else{
+                    // 定时器取消
+                    dateSch.cancel();
+                    //console.log("结束");
+                    total=0;
+                }
+
+            });
+        });
+
+    }
 }
+
+ photosController.scheduleCronstyle();
 // let res= photosController.fetchingData('https://unsplash.com/napi/topics/travel/photos?page=1&per_page=10');
 // console.log(res);
 module.exports = photosController;
