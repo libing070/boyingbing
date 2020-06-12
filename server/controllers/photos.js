@@ -125,13 +125,13 @@ class photosController {
                     }
                 }else{
                     // 定时器取消
-                    dateSch.cancel();
-                    total=0;
+                  //  dateSch.cancel();
+                 //   total=0;
                 }
             }catch(err){
                 // 定时器取消
-                dateSch.cancel();
-                total=0;
+               // dateSch.cancel();
+               // total=0;
            //   console.log(err);
             }
 
