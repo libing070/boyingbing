@@ -9,7 +9,7 @@ class accesslogController {
     static async create(ctx){
         //接收客服端
         let req = ctx.request.body;
-        console.info(req);
+      //  console.info(req);
         if(req){
             try{
                const res= {

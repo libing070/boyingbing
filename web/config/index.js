@@ -22,7 +22,7 @@ module.exports = {
     },
 
     // Various Dev Server settings
-   host:'192.168.1.182',//本地
+   host:'192.168.0.12',//本地
    // host:'39.100.72.53',//正式
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,

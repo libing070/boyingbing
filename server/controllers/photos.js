@@ -1,5 +1,6 @@
 const PhotosleModel = require("../modules/photos");
 const request = require('request');
+let {logInfo,logResponse,logHandle,logError} = require('../utils/logs.js');
 const schedule = require('node-schedule');
 let total=0,dateSch;
 class photosController {
@@ -11,7 +12,6 @@ class photosController {
     static async create(ctx){
         //接收客服端
         let req = ctx.request.body;
-        console.info(req);
         if(req){
             try{
                 var data={};
@@ -51,6 +51,7 @@ class photosController {
                     }
                     const ret = await PhotosleModel.createPhotos(res);
                      data = await PhotosleModel.getPhotosDetail(ret.id);
+
                 }
 
 
@@ -87,7 +88,6 @@ class photosController {
                 //创建文章模型
                 const detchingdata = await photosController.fetchingData(url);
                 var list=JSON.parse(detchingdata);
-              //  console.log(list);
                 if(list.length>0){
                     for(var i=0;i<list.length;i++){
                       const res={
@@ -122,7 +122,6 @@ class photosController {
                             }
                             const ret = await PhotosleModel.createPhotos(res);
                             data = await PhotosleModel.getPhotosDetail(ret.id);
-                          //  console.log(data);
                     }
                 }else{
                     // 定时器取消
@@ -133,7 +132,7 @@ class photosController {
                 // 定时器取消
                 dateSch.cancel();
                 total=0;
-              console.log(err);
+           //   console.log(err);
             }
 
     }
@@ -180,7 +179,7 @@ class photosController {
         try{
             // 查询文章详情模型
             let data = await PhotosleModel.getPhotosAllList();
-            console.log(data);
+           // console.log(data);
             ctx.response.status = 200;
             ctx.body = {
                 code: 200,
@@ -204,7 +203,6 @@ class photosController {
      */
     static async getPhotosPageList(ctx){
         let pageNo = ctx.params.pageNo;
-        console.log(pageNo+"====");
         if(pageNo){
             try{
                 // 查询文章详情模型
@@ -253,18 +251,19 @@ class photosController {
 
     }
     static async  scheduleCronstyle(){
-       // 在每天的凌晨1点1分30秒触发
+       // 每天的凌晨1点1分30秒触发
         let timeSch=  schedule.scheduleJob('30 1 1 * * *',()=>{
-            //每5秒执行一次:
-             dateSch= schedule.scheduleJob('*/5 * * * * *',()=>{
+            //每30s执行一次:
+             dateSch= schedule.scheduleJob('*/30 * * * * *',()=>{
                 if(total<100){
                     total++;
+                  //  console.log(total);
                     var url='https://unsplash.com/napi/photos?page='+total+'&per_page=10';
                      photosController.latestCreate(url);
                 }else{
                     // 定时器取消
                     dateSch.cancel();
-                    //console.log("结束");
+                   // console.log("结束");
                     total=0;
                 }
 

@@ -5,10 +5,9 @@ const views = require('koa-views')
 const json = require('koa-json')
 const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
-const logger = require('koa-logger')
+//const logger = require('koa-logger')
 
 const index = require('./routes/index')
-
 app.use(cors()) //使用cors
 // app.use(cors({
 //     origin: function (ctx) {
@@ -31,7 +30,7 @@ app.use(bodyparser({
   enableTypes:['json', 'form', 'text']
 }))
 app.use(json())
-app.use(logger())
+//app.use(logger())
 app.use(require('koa-static')(__dirname + '/public'))
 
 app.use(views(__dirname + '/views', {
@@ -40,11 +39,19 @@ app.use(views(__dirname + '/views', {
 }))
 
 // logger
+
+const logsUtil = require('./utils/logs.js');
 app.use(async (ctx, next) => {
-  const start = new Date()
-  await next()
-  const ms = new Date() - start
-  console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
+  const start = new Date();
+    let intervals;
+    try {
+        await next();
+        intervals = new Date() - start;
+        logsUtil.logResponse(ctx, intervals);	  //记录响应日志
+    } catch (error) {
+        intervals = new Date() - start;
+        logsUtil.logError(ctx, error, intervals);//记录异常日志
+    }
 })
 
 // routes
