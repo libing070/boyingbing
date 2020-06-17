@@ -1,11 +1,11 @@
 <template>
-  <div class="pc-index"></div>
+  <div class="pc-test"></div>
 </template>
 
 <script>
   import API from '../../api/api_article';
     export default {
-        name: "index",
+        name: "test",
       created(){
         this.findListById();
         this.findAll();
@@ -15,7 +15,6 @@
           let that = this;
           that.loading = true;
           API.allList().then(function (result) {
-            console.log(result);
             $("body .pc-index").append('<div>'+`${　JSON.stringify(result)}`+'</div>');
             that.loading = false;
             if(result){
@@ -26,7 +25,6 @@
             that.$message.error({showClose: true, message: err.toString(), duration: 2000});
           }).catch(function (error) {
             that.loading = false;
-            console.log(error);
             that.$message.error({showClose: true, message: '请求出现异常', duration: 2000});
           });
         },
@@ -34,7 +32,6 @@
           let that = this;
           that.loading = true;
           API.findListById({id:27}).then(function (result) {
-            console.log(result);
             that.loading = false;
             if(result){
               that.res=result;
@@ -44,7 +41,6 @@
             that.$message.error({showClose: true, message: err.toString(), duration: 2000});
           }).catch(function (error) {
             that.loading = false;
-            console.log(error);
             that.$message.error({showClose: true, message: '请求出现异常', duration: 2000});
           });
         },

@@ -16,6 +16,7 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
+  background: #fabe00;
   h1 {
     text-align: center;
     font-size: 0.6rem;

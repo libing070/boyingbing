@@ -1,10 +1,10 @@
 <template>
-  <div class="wap-index">pc</div>
+  <div class="wap-test">wap</div>
 </template>
 
 <script>
     export default {
-        name: "index",
+        name: "test",
     }
 </script>
 

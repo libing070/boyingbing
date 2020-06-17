@@ -20,7 +20,6 @@
         <el-radio-button label="athletics">Athletics</el-radio-button>
         <el-radio-button label="spirituality">Spirituality</el-radio-button>
         <el-radio-button label="health">Health & Wellness</el-radio-button>
-        <el-radio-button label="current-events">current-events</el-radio-button>
       </el-radio-group>
     </div>
     <div class="start-btn"><span @click="startExec">开始执行</span>&nbsp;&nbsp;<span @click="stopExec">暂停</span></div>

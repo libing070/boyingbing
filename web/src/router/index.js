@@ -4,10 +4,11 @@ import Router from 'vue-router'
 import { Toast } from 'vant';
 import NotFound from '@/components/404/index'
 import WapLogin from '@/components/wap/Login'
-import WapIndex from '@/components/wap/Index'
+import WapTest from '@/components/wap/Test'
 
 import PcLogin from '@/components/pc/Login'
-import PcIndex from '@/components/pc/Index'
+import PcTest from '@/components/pc/Test'
+import HomeIndex from '@/components/Home/Index'
 import DataFetching from '@/components/pc/DataFetching'
 import Falls from '@/components/pc/Falls'
 
@@ -33,8 +34,8 @@ const router= new Router({
       redirect:'/'+terminaType+'/login',
     },
     {
-      path: '/'+terminaType+'/index',
-      component:terminaType=='wap'?WapIndex:PcIndex,
+      path: '/'+terminaType+'/test',
+      component:terminaType=='wap'?WapTest:PcTest,
     },
     {
       path: '/admin/datafetching',
@@ -46,6 +47,13 @@ const router= new Router({
     {
       path: '/pc/falls',
       component:Falls,
+      meta: {
+        permission: false
+      },
+    },
+    {
+      path: '/index',
+      component:HomeIndex,
       meta: {
         permission: false
       },

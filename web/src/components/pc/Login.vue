@@ -125,6 +125,7 @@
     height: 100%;
     position: relative;
     font-size: 6px;
+    background: #fabe00;
     .login{
       position: absolute;
       left: 0;
