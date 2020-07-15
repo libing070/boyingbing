@@ -53,7 +53,8 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: './',
+     //assetsPublicPath: './',
+     assetsPublicPath: '/',//打包静态资源的路径需要设置绝对路径
 
     /**
      * Source Maps
