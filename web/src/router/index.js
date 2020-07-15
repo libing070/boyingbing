@@ -21,6 +21,7 @@ let terminaType = document.documentElement.clientWidth < 768 ? "wap" : 'pc';
 console.log(terminaType);
 store.commit('getTerminaType',terminaType);
 const router= new Router({
+  mode: "history",
   routes:[
     {
       path: '/'+terminaType+'/login',
@@ -31,7 +32,8 @@ const router= new Router({
     },
     {
       path: '/',
-      redirect:'/'+terminaType+'/login',
+       //  redirect:'/'+terminaType+'/login',
+      redirect:'/index'
     },
     {
       path: '/'+terminaType+'/test',
